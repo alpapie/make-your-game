@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="dashbord">
+        <div class="player-infos">
+          <button class="pause">pause</button>
+          <div class="mute"><button>mute</button></div>
+          <div class="score">Score : <span>0</span></div>
+          <div class="timer">Timer : <span></span></div>
+          <div class="lives">
+            <div><img src="./assets/icons/player.png" alt="Spaceship 1" /></div>
+            <div><img src="./assets/icons/player.png" alt="Spaceship 2" /></div>
+            <div><img src="./assets/icons/player.png" alt="Spaceship 3" /></div>
+          </div>
+        </div>
+        <div class="player-guide">
+          <p class="move-right">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                <path
+                  style="fill: #20ff20"
+                  d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z"
+                  data-name="Left"
+                />
+              </svg>
+            </span>
+            Move <em>Left</em>
+          </p>
+          <p class="move-left">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                <path
+                  style="fill: #20ff20"
+                  d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                  data-name="Right"
+                />
+              </svg>
+            </span>
+            Move <em>Right</em>
+          </p>
+          <p>
+            <i style="color: #20ff20">SPACE</i>
+            Shoot
+          </p>
+          <br />
+          <p>
+            <i style="color: #20ff20">ESCAPE</i>
+            pause
+          </p>
+        </div>
+      </div>
+      <div class="main-game game" id="gameId">
+        <div class="aliens"></div>
+        <div class="all-obstacle">
+          <!-- Obstacles -->
+          <div class="obstacles"></div>
+          <!-- Player -->
+        </div>
+        <div class="player" id="player">
+          <img src="./assets/icons/player.png" alt="" />
+        </div>
+        <div id="shoot"></div>
+      </div>
+      <div class="rigth"></div>
+    </div>
+    <div class="menu">
+      <button class="resume">play</button>
+      <button class="restart">restart</button>
+    </div>
+    <div class="game_over">
+      <p></p>
+      <button class="restart-end">restart</button>
+    </div>
+  </body>
+
+  <script type="module" src="./js/index.js"></script>
+</html>

@@ -1,0 +1,298 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* amination background */
+@keyframes anim {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 110%;
+  }
+}
+
+body {
+  overflow: hidden;
+  content: "";
+  width: 100%;
+  /* height: 150vh; */
+  background: url("../assets/images/BackdropBlackLittleSparkTransparent.png")
+    black repeat;
+  animation: anim 30s linear infinite;
+}
+
+/* end animation */
+/* .game{
+    position: absolute;
+    left: 26%;
+    top: 50px;
+    transform:scale(1);
+} */
+.main {
+  display: flex;
+  height: 90vh;
+  padding: 2vw;
+  justify-content: space-between;
+  transform: scale(1);
+}
+.dashbord {
+  /* background-color: rgb(3, 3, 49); */
+  width: 25%;
+  border: 2px green solid;
+  margin-right: 3vw;
+  display: flex;
+  padding: 1em;
+  display: block;
+  color: #fff;
+}
+.timer,
+.score {
+  color: whitesmoke;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-style: italic;
+  font-size: larger;
+  margin-top:3vw ;
+}
+.lives {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 12px;
+  margin-top:3vw ;
+}
+
+.rigth {
+  width: 18%;
+  z-index: 999;
+}
+.mute,.pause,.restart-end,button{
+  cursor:pointer;
+  }
+
+.main-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2vw;
+  width: 55%;
+  border: 1px #20ff20 solid;
+  margin-left: 2vw;
+}
+
+/* alien  */
+.FithAlien_div {
+  display: grid;
+  grid-template-columns: repeat(10, 0fr);
+  grid-template-rows: repeat(3, 2vw);
+  grid-gap: 5px;
+  padding-top: 0.5vw;
+  /* grid-auto-rows: minmax(10px, auto); */
+  align-items: center;
+}
+
+.PBA-alien,
+.Malack-alien {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29vw;
+  z-index: 3;
+}
+
+.alien-img {
+  width: 1.3vw;
+  padding: 3px;
+}
+
+/* end alien */
+
+/* payer */
+.player {
+  /* position: absolute; */
+  width: 4vw;
+  height: 2vw;
+  margin-bottom: 5px;
+}
+.player > img {
+  width: 4vw;
+}
+.big-aliens {
+  width: 3vw;
+  height: 2vw;
+  margin-bottom: 5px;
+}
+
+
+.big-alien {
+  width: 2vw;
+}
+
+/* end player */
+
+/* OBSTACLES */
+.all-obstacle {
+  width: 100%;
+  margin-top: 23%;
+}
+
+.obstacles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.alive {
+  background-color: white;
+}
+.died {
+  background-color: black;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* end */
+
+.point {
+  width: 1vw;
+  height: 0.7vw;
+}
+/* alien projectile */
+.alien-ball {
+  width: 5px;
+  height: 9px;
+  background-color: red;
+}
+/* end */
+
+/* SHOOT */
+#shoot {
+  position: absolute;
+  width: 5px;
+  height: 9px;
+  background-color: orange;
+  bottom: 0;
+  display: none;
+}
+
+
+/* game pause menu */
+
+.menu,
+.game_over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #20ff20;
+}
+.menu {
+  background-color: #000000;
+}
+
+.game_over {
+  background-color: none;
+  flex-direction: column;
+  font-family: "press start 2p";
+}
+
+p {
+  font-size: 3em;
+}
+
+/* button pause */
+button {
+  font-family: "press start 2p";
+  --b: 2.5px;
+  /* border thickness */
+  --s: 0.4em;
+  /* size of the corner */
+  --color: #20ff20;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 1.1em;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10em;
+  height: 3em;
+}
+
+button:hover,
+button:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+button:active {
+  background: var(--color);
+  color: #fff;
+}
+
+.player-guide{
+  margin-top: 10vh;
+}
+.icon{
+  display: block;
+  width: 2.3vw;
+}
+.player-guide>p{
+  display: flex;
+  gap: 1vw;
+  font-size: 1.3vw;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+.player-guide>p>i{
+  font-size: 1.5vw;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 780px) {
+  .main{
+    display: block;
+    justify-content: center;
+  }
+  .dashbord{
+    width:90vw;
+    margin-bottom: 2vw;
+  }
+  .player-infos{
+    display: flex;
+  }
+  .main-game {
+    height: 75vh;
+    width:80%;
+  }
+  .player-guide{
+    margin-top: 2vh;
+    display: flex;
+    gap: 4vw;
+  }
+  
+}
+.lives>div>img{
+  width: 2vw;
+  height: 1vw;
+}
