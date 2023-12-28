@@ -1,5 +1,5 @@
 # JavaScript Space Invaders Game
-
+![Alt Text](./ezgif.com-video-to-gif-converter.gif)
 ## Overview
 
 This project is a simple implementation of the classic Space Invaders game using plain JavaScript, HTML, and CSS. The game runs at a consistent 60 FPS and includes features such as smooth controls, a pause menu, a score board, and the iconic space invaders gameplay.

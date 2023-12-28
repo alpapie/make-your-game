@@ -3,7 +3,7 @@ import { displayGameOver, pause_game ,resume_game} from "../animation/menu.js";
 import { PlayerStat } from "./playerstats.js";
 import { debounce } from "../utils.js";
 import { shootSound } from "../animation/audio.js";
-const bulletSpeed = 10;
+const bulletSpeed = 12;
 const PlayerSpeed=7
 const updateScore = (value) => {
   let score = document.querySelector(".score > span");
@@ -145,7 +145,7 @@ const setVisibility = (isCollision, shootElement) => {
 
 //player move vessau
 
-const debouncedShoot = debounce(shoot, 300);
+const debouncedShoot = debounce(shoot, 50);
 
 export const handleKeyDown = (event) => {
   if (!window.isPaused) {
