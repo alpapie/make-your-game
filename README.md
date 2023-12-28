@@ -41,3 +41,5 @@ The game follows the genre of Space Invaders, where the player controls a spaces
 **[mamoundiaye](https://github.com/alpapie?tab=repositories)**<br>
 **[yayediop](https://learn.zone01dakar.sn/git/yayediop)**<br>
 **[bindoye](https://learn.zone01dakar.sn/git/bindoye)**<br>
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L7SNADI)
